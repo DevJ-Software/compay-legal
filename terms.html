@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos y Condiciones — ComPay Delivery</title>
+<style>
+  :root {
+    --ink: #1b2430;
+    --paper: #eff2f1;
+    --paper-raised: #ffffff;
+    --accent: #1f6f78;
+    --accent-soft: #dceeec;
+    --line: #d7dbd9;
+    --muted: #5b6560;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e7eae8;
+      --paper: #14181a;
+      --paper-raised: #191e20;
+      --accent: #4fb8ae;
+      --accent-soft: #1c2e2c;
+      --line: #2a2f2e;
+      --muted: #9aa6a1;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e7eae8;
+    --paper: #14181a;
+    --paper-raised: #191e20;
+    --accent: #4fb8ae;
+    --accent-soft: #1c2e2c;
+    --line: #2a2f2e;
+    --muted: #9aa6a1;
+  }
+  :root[data-theme="light"] {
+    --ink: #1b2430;
+    --paper: #eff2f1;
+    --paper-raised: #ffffff;
+    --accent: #1f6f78;
+    --accent-soft: #dceeec;
+    --line: #d7dbd9;
+    --muted: #5b6560;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .mono {
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  header.doc-head {
+    border-bottom: 1px solid var(--line);
+    padding: 2.5rem 1.5rem 1.75rem;
+  }
+  .doc-head-inner {
+    max-width: 46rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    flex: none;
+  }
+  .brand-mark svg { width: 16px; height: 16px; }
+  .brand-name {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1.doc-title {
+    margin: 0.2rem 0 0;
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  .doc-meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .doc-meta .mono { color: var(--muted); }
+
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.25rem 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  nav.toc {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+  }
+  nav.toc summary {
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  nav.toc ol {
+    margin: 0.9rem 0 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+  }
+  nav.toc a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc .num {
+    color: var(--accent);
+    margin-right: 0.5em;
+  }
+
+  section.clause {
+    scroll-margin-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.6rem;
+  }
+  section.clause:first-of-type { border-top: none; padding-top: 0; }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+  .clause-num {
+    color: var(--accent);
+    font-size: 0.95rem;
+    flex: none;
+  }
+  h2.clause-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  .clause p {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--ink);
+  }
+
+  footer.doc-foot {
+    border-top: 1px solid var(--line);
+    padding: 2rem 1.5rem 3rem;
+  }
+  .doc-foot-inner {
+    max-width: 46rem;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    align-items: baseline;
+  }
+  .doc-foot-inner a { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    header.doc-head { padding: 1.8rem 1.25rem 1.4rem; }
+    main { padding: 1.6rem 1.25rem 4rem; gap: 1.8rem; }
+  }
+</style>
+
+
+</head>
+<body>
+<header class="doc-head">
+  <div class="doc-head-inner">
+    <div class="brand-row">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 7h11v9H3z" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M14 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="7" cy="18" r="1.6" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="17.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+      </span>
+      <span class="brand-name">ComPay Delivery</span>
+    </div>
+    <h1 class="doc-title">Términos y Condiciones</h1>
+    <p class="doc-meta">Última actualización: <span class="mono">4 de julio de 2026</span></p>
+  </div>
+</header>
+
+<main>
+  <nav class="toc" aria-label="Índice">
+    <details open>
+      <summary>Índice</summary>
+      <ol>
+        <li><a href="#c1"><span class="num mono">01</span>Aceptación de los Términos</a></li>
+        <li><a href="#c2"><span class="num mono">02</span>Descripción del Servicio</a></li>
+        <li><a href="#c3"><span class="num mono">03</span>Registro y Cuenta de Usuario</a></li>
+        <li><a href="#c4"><span class="num mono">04</span>Pedidos, Precios y Pagos</a></li>
+        <li><a href="#c5"><span class="num mono">05</span>Cancelaciones</a></li>
+        <li><a href="#c6"><span class="num mono">06</span>Conducta del Usuario</a></li>
+        <li><a href="#c7"><span class="num mono">07</span>Propiedad Intelectual</a></li>
+        <li><a href="#c8"><span class="num mono">08</span>Limitación de Responsabilidad</a></li>
+        <li><a href="#c9"><span class="num mono">09</span>Suspensión y Terminación de Cuenta</a></li>
+        <li><a href="#c10"><span class="num mono">10</span>Modificaciones a los Términos</a></li>
+        <li><a href="#c11"><span class="num mono">11</span>Ley Aplicable</a></li>
+        <li><a href="#c12"><span class="num mono">12</span>Contacto</a></li>
+      </ol>
+    </details>
+  </nav>
+
+  <section class="clause" id="c1">
+    <div class="clause-head"><span class="clause-num mono">01</span><h2 class="clause-title">Aceptación de los Términos</h2></div>
+    <p>Al crear una cuenta o usar ComPay Delivery ("la App", "el Servicio") aceptas estos Términos y Condiciones y nuestra Política de Privacidad. Si no estás de acuerdo, no debes usar la App. El Servicio es operado por DevJ Software.</p>
+  </section>
+
+  <section class="clause" id="c2">
+    <div class="clause-head"><span class="clause-num mono">02</span><h2 class="clause-title">Descripción del Servicio</h2></div>
+    <p>ComPay Delivery conecta a clientes que necesitan enviar paquetes o encomiendas con mensajeros independientes ("couriers") que realizan la recogida y entrega. La App no es una empresa de transporte ni emplea directamente a los mensajeros: actúa como intermediario tecnológico entre ambas partes.</p>
+  </section>
+
+  <section class="clause" id="c3">
+    <div class="clause-head"><span class="clause-num mono">03</span><h2 class="clause-title">Registro y Cuenta de Usuario</h2></div>
+    <p>Para usar la App debes registrarte con un número de teléfono válido y datos veraces (nombre, correo). Eres responsable de mantener la confidencialidad de tu acceso y de toda actividad realizada desde tu cuenta. Los mensajeros pasan además por un proceso de verificación de identidad antes de poder aceptar pedidos.</p>
+  </section>
+
+  <section class="clause" id="c4">
+    <div class="clause-head"><span class="clause-num mono">04</span><h2 class="clause-title">Pedidos, Precios y Pagos</h2></div>
+    <p>El precio de cada envío se calcula según la distancia, zona y tipo de paquete, y se muestra antes de confirmar el pedido. Los pagos se realizan por Transfermóvil, EnZona o efectivo contra entrega — la App no almacena datos de tarjetas bancarias ni procesa pagos con pasarelas internacionales. Un pedido puede autocancelarse si ningún mensajero lo acepta dentro del tiempo límite mostrado en la App.</p>
+  </section>
+
+  <section class="clause" id="c5">
+    <div class="clause-head"><span class="clause-num mono">05</span><h2 class="clause-title">Cancelaciones</h2></div>
+    <p>El cliente puede cancelar un pedido mientras esté pendiente o recién asignado, sujeto a las condiciones mostradas en la App. Una vez el mensajero recogió el paquete, la cancelación puede generar un cargo parcial para cubrir el trabajo ya realizado. Nos reservamos el derecho de suspender pedidos que parezcan fraudulentos o abusivos.</p>
+  </section>
+
+  <section class="clause" id="c6">
+    <div class="clause-head"><span class="clause-num mono">06</span><h2 class="clause-title">Conducta del Usuario</h2></div>
+    <p>Al usar la App te comprometes a: proporcionar direcciones e información de contacto correctas, no enviar artículos ilegales, peligrosos o prohibidos, tratar con respeto a mensajeros y otros usuarios, y no usar la App para fines distintos a los previstos. Podemos suspender o cerrar cuentas que incumplan estas reglas.</p>
+  </section>
+
+  <section class="clause" id="c7">
+    <div class="clause-head"><span class="clause-num mono">07</span><h2 class="clause-title">Propiedad Intelectual</h2></div>
+    <p>La App, su diseño, marca, logotipos y código son propiedad de DevJ Software o de sus licenciantes. No está permitido copiar, modificar o distribuir la App ni su contenido sin autorización previa por escrito.</p>
+  </section>
+
+  <section class="clause" id="c8">
+    <div class="clause-head"><span class="clause-num mono">08</span><h2 class="clause-title">Limitación de Responsabilidad</h2></div>
+    <p>La App facilita la conexión entre clientes y mensajeros, pero no garantiza la disponibilidad continua del servicio ni es responsable de daños indirectos derivados del uso de la App. Los mensajeros son contratistas independientes; su conducta durante la entrega no compromete directamente a DevJ Software más allá de lo exigido por la ley aplicable.</p>
+  </section>
+
+  <section class="clause" id="c9">
+    <div class="clause-head"><span class="clause-num mono">09</span><h2 class="clause-title">Suspensión y Terminación de Cuenta</h2></div>
+    <p>Puedes eliminar tu cuenta en cualquier momento desde Ajustes. Podemos suspender o cerrar cuentas que violen estos Términos, realicen actividad fraudulenta, o supongan un riesgo para otros usuarios o para la operación del Servicio.</p>
+  </section>
+
+  <section class="clause" id="c10">
+    <div class="clause-head"><span class="clause-num mono">10</span><h2 class="clause-title">Modificaciones a los Términos</h2></div>
+    <p>Podemos actualizar estos Términos periódicamente. Te notificaremos los cambios relevantes dentro de la App. El uso continuado del Servicio después de una actualización implica la aceptación de los nuevos Términos.</p>
+  </section>
+
+  <section class="clause" id="c11">
+    <div class="clause-head"><span class="clause-num mono">11</span><h2 class="clause-title">Ley Aplicable</h2></div>
+    <p>Estos Términos se rigen por las leyes de la República de Cuba, sin perjuicio de los derechos que la legislación local del usuario pueda reconocerle de forma imperativa.</p>
+  </section>
+
+  <section class="clause" id="c12">
+    <div class="clause-head"><span class="clause-num mono">12</span><h2 class="clause-title">Contacto</h2></div>
+    <p>Para preguntas sobre estos Términos, escríbenos a <a href="mailto:soporte@compaydelivery.com">soporte@compaydelivery.com</a>.</p>
+  </section>
+</main>
+
+<footer class="doc-foot">
+  <div class="doc-foot-inner">
+    <span>© 2026 DevJ Software</span>
+    <span>ComPay Delivery</span>
+    <a href="mailto:soporte@compaydelivery.com">soporte@compaydelivery.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

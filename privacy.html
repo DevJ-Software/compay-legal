@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — ComPay Delivery</title>
+<style>
+  :root {
+    --ink: #1b2430;
+    --paper: #eff2f1;
+    --paper-raised: #ffffff;
+    --accent: #1f6f78;
+    --accent-soft: #dceeec;
+    --line: #d7dbd9;
+    --muted: #5b6560;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e7eae8;
+      --paper: #14181a;
+      --paper-raised: #191e20;
+      --accent: #4fb8ae;
+      --accent-soft: #1c2e2c;
+      --line: #2a2f2e;
+      --muted: #9aa6a1;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e7eae8;
+    --paper: #14181a;
+    --paper-raised: #191e20;
+    --accent: #4fb8ae;
+    --accent-soft: #1c2e2c;
+    --line: #2a2f2e;
+    --muted: #9aa6a1;
+  }
+  :root[data-theme="light"] {
+    --ink: #1b2430;
+    --paper: #eff2f1;
+    --paper-raised: #ffffff;
+    --accent: #1f6f78;
+    --accent-soft: #dceeec;
+    --line: #d7dbd9;
+    --muted: #5b6560;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .mono {
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  header.doc-head {
+    border-bottom: 1px solid var(--line);
+    padding: 2.5rem 1.5rem 1.75rem;
+  }
+  .doc-head-inner {
+    max-width: 46rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    flex: none;
+  }
+  .brand-mark svg { width: 16px; height: 16px; }
+  .brand-name {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1.doc-title {
+    margin: 0.2rem 0 0;
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  .doc-meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .doc-meta .mono { color: var(--muted); }
+
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.25rem 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .lede {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.95rem;
+  }
+  .lede p { margin: 0; max-width: 60ch; }
+
+  nav.toc {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+  }
+  nav.toc summary {
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  nav.toc ol {
+    margin: 0.9rem 0 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+  }
+  nav.toc a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc .num {
+    color: var(--accent);
+    margin-right: 0.5em;
+  }
+
+  .data-table {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .data-row {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    font-size: 0.92rem;
+  }
+  .data-row + .data-row { border-top: 1px solid var(--line); }
+  .data-row dt {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .data-row dd { margin: 0; color: var(--ink); }
+
+  section.clause {
+    scroll-margin-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.6rem;
+  }
+  section.clause:first-of-type { border-top: none; padding-top: 0; }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+  .clause-num {
+    color: var(--accent);
+    font-size: 0.95rem;
+    flex: none;
+  }
+  h2.clause-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  .clause p {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--ink);
+  }
+
+  footer.doc-foot {
+    border-top: 1px solid var(--line);
+    padding: 2rem 1.5rem 3rem;
+  }
+  .doc-foot-inner {
+    max-width: 46rem;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    align-items: baseline;
+  }
+  .doc-foot-inner a { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    header.doc-head { padding: 1.8rem 1.25rem 1.4rem; }
+    main { padding: 1.6rem 1.25rem 4rem; gap: 1.8rem; }
+    .data-row { grid-template-columns: 1fr; gap: 0.2rem; }
+  }
+</style>
+
+
+</head>
+<body>
+<header class="doc-head">
+  <div class="doc-head-inner">
+    <div class="brand-row">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </span>
+      <span class="brand-name">ComPay Delivery</span>
+    </div>
+    <h1 class="doc-title">Política de Privacidad</h1>
+    <p class="doc-meta">Última actualización: <span class="mono">4 de julio de 2026</span></p>
+  </div>
+</header>
+
+<main>
+  <div class="lede">
+    <p>Esta política explica qué datos recopila ComPay Delivery, para qué los usamos y con quién los compartimos — incluida tu ubicación en tiempo real, que solo se transmite mientras tienes un pedido activo.</p>
+  </div>
+
+  <nav class="toc" aria-label="Índice">
+    <details open>
+      <summary>Índice</summary>
+      <ol>
+        <li><a href="#p1"><span class="num mono">01</span>Qué Información Recopilamos</a></li>
+        <li><a href="#p2"><span class="num mono">02</span>Cómo Usamos tu Información</a></li>
+        <li><a href="#p3"><span class="num mono">03</span>Ubicación en Tiempo Real</a></li>
+        <li><a href="#p4"><span class="num mono">04</span>Con Quién Compartimos tus Datos</a></li>
+        <li><a href="#p5"><span class="num mono">05</span>Notificaciones Push</a></li>
+        <li><a href="#p6"><span class="num mono">06</span>Almacenamiento y Seguridad</a></li>
+        <li><a href="#p7"><span class="num mono">07</span>Retención de Datos</a></li>
+        <li><a href="#p8"><span class="num mono">08</span>Tus Derechos</a></li>
+        <li><a href="#p9"><span class="num mono">09</span>Menores de Edad</a></li>
+        <li><a href="#p10"><span class="num mono">10</span>Cambios a esta Política</a></li>
+        <li><a href="#p11"><span class="num mono">11</span>Contacto</a></li>
+      </ol>
+    </details>
+  </nav>
+
+  <section class="clause" id="p1">
+    <div class="clause-head"><span class="clause-num mono">01</span><h2 class="clause-title">Qué Información Recopilamos</h2></div>
+    <p style="margin-bottom:1rem;">Según cómo uses la App, recopilamos:</p>
+    <dl class="data-table">
+      <div class="data-row"><dt>Cuenta</dt><dd>Nombre, teléfono, correo, foto de perfil.</dd></div>
+      <div class="data-row"><dt>Pedidos</dt><dd>Direcciones de recogida/entrega, detalles del paquete, método de pago elegido, historial de pedidos.</dd></div>
+      <div class="data-row"><dt>Ubicación</dt><dd>Posición GPS del mensajero mientras tiene un pedido activo; ubicación del cliente al crear un pedido, para calcular distancia y ruta.</dd></div>
+      <div class="data-row"><dt>Dispositivo</dt><dd>Identificador del dispositivo para notificaciones push (Firebase).</dd></div>
+      <div class="data-row"><dt>Fotos</dt><dd>Fotos que subas voluntariamente — de perfil o del paquete a enviar.</dd></div>
+    </dl>
+  </section>
+
+  <section class="clause" id="p2">
+    <div class="clause-head"><span class="clause-num mono">02</span><h2 class="clause-title">Cómo Usamos tu Información</h2></div>
+    <p>Usamos tus datos para: crear y gestionar tu cuenta, calcular precios y rutas de envío, asignar mensajeros disponibles cerca de ti, mostrar el seguimiento del pedido en tiempo real, enviarte notificaciones sobre el estado de tus pedidos, y brindar soporte al cliente. No usamos tu ubicación con fines publicitarios.</p>
+  </section>
+
+  <section class="clause" id="p3">
+    <div class="clause-head"><span class="clause-num mono">03</span><h2 class="clause-title">Ubicación en Tiempo Real</h2></div>
+    <p>Si eres mensajero, tu ubicación se transmite mientras estás disponible o tienes un pedido activo, para que el cliente pueda ver el avance de la entrega y para asignarte pedidos cercanos. Si eres cliente, tu ubicación se usa solo para sugerir tu zona/dirección y calcular el costo del envío. Puedes desactivar el acceso a la ubicación desde los ajustes de tu dispositivo, aunque esto puede limitar funciones como el seguimiento en tiempo real.</p>
+  </section>
+
+  <section class="clause" id="p4">
+    <div class="clause-head"><span class="clause-num mono">04</span><h2 class="clause-title">Con Quién Compartimos tus Datos</h2></div>
+    <p>Compartimos datos limitados con proveedores que nos ayudan a operar la App: Cloudinary (almacenamiento de imágenes), Firebase Cloud Messaging (notificaciones push), y servicios de geocodificación/mapas (Mapbox, Nominatim/OpenStreetMap) para resolver direcciones y calcular rutas. Estos proveedores solo reciben los datos necesarios para prestar su función específica y no están autorizados a usarlos con otros fines. No vendemos tus datos personales a terceros.</p>
+  </section>
+
+  <section class="clause" id="p5">
+    <div class="clause-head"><span class="clause-num mono">05</span><h2 class="clause-title">Notificaciones Push</h2></div>
+    <p>Usamos Firebase Cloud Messaging para avisarte sobre cambios de estado en tus pedidos (asignación, llegada del mensajero, entrega, cancelación). Puedes desactivar las notificaciones desde los ajustes de tu dispositivo o desde la App.</p>
+  </section>
+
+  <section class="clause" id="p6">
+    <div class="clause-head"><span class="clause-num mono">06</span><h2 class="clause-title">Almacenamiento y Seguridad</h2></div>
+    <p>Tus datos se almacenan en servidores con acceso restringido y se transmiten mediante conexiones cifradas (HTTPS). El acceso interno a los datos está limitado según el rol de cada usuario dentro de la plataforma (sistema de permisos). Ningún sistema es 100% invulnerable, pero aplicamos medidas razonables para proteger tu información.</p>
+  </section>
+
+  <section class="clause" id="p7">
+    <div class="clause-head"><span class="clause-num mono">07</span><h2 class="clause-title">Retención de Datos</h2></div>
+    <p>Conservamos tus datos mientras tu cuenta esté activa y el tiempo adicional necesario para cumplir obligaciones legales, resolver disputas o hacer valer nuestros acuerdos. Al eliminar tu cuenta, eliminamos o anonimizamos tus datos personales salvo que la ley exija conservarlos por más tiempo (por ejemplo, registros de pagos).</p>
+  </section>
+
+  <section class="clause" id="p8">
+    <div class="clause-head"><span class="clause-num mono">08</span><h2 class="clause-title">Tus Derechos</h2></div>
+    <p>Puedes acceder, corregir o eliminar tu información personal desde la sección de perfil de la App, o solicitándolo a <a href="mailto:soporte@compaydelivery.com">soporte@compaydelivery.com</a>. También puedes solicitar una copia de tus datos o pedir que dejemos de procesarlos, sujeto a las excepciones legales aplicables (por ejemplo, registros necesarios para disputas de pago ya realizadas).</p>
+  </section>
+
+  <section class="clause" id="p9">
+    <div class="clause-head"><span class="clause-num mono">09</span><h2 class="clause-title">Menores de Edad</h2></div>
+    <p>El Servicio no está dirigido a menores de 18 años. No recopilamos a sabiendas información de menores. Si detectamos una cuenta de un menor, la eliminaremos.</p>
+  </section>
+
+  <section class="clause" id="p10">
+    <div class="clause-head"><span class="clause-num mono">10</span><h2 class="clause-title">Cambios a esta Política</h2></div>
+    <p>Podemos actualizar esta Política de Privacidad periódicamente. Si los cambios son significativos, te lo notificaremos dentro de la App antes de que entren en vigor.</p>
+  </section>
+
+  <section class="clause" id="p11">
+    <div class="clause-head"><span class="clause-num mono">11</span><h2 class="clause-title">Contacto</h2></div>
+    <p>Para preguntas sobre privacidad o para ejercer tus derechos sobre tus datos, escríbenos a <a href="mailto:soporte@compaydelivery.com">soporte@compaydelivery.com</a>.</p>
+  </section>
+</main>
+
+<footer class="doc-foot">
+  <div class="doc-foot-inner">
+    <span>© 2026 DevJ Software</span>
+    <span>ComPay Delivery</span>
+    <a href="mailto:soporte@compaydelivery.com">soporte@compaydelivery.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
