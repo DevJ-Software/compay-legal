@@ -251,13 +251,13 @@
       <span class="brand-name">ComPay Delivery</span>
     </div>
     <h1 class="doc-title">Política de Privacidad</h1>
-    <p class="doc-meta">Última actualización: <span class="mono">23 de octubre de 2026</span></p>
+    <p class="doc-meta">Última actualización: <span class="mono">24 de octubre de 2026</span></p>
   </div>
 </header>
 
 <main>
   <div class="lede">
-    <p>Esta política explica qué datos recopila ComPay Delivery, para qué los usamos y con quién los compartimos — incluida tu ubicación en tiempo real, que solo se transmite mientras tienes un pedido activo.</p>
+    <p>Esta política explica qué datos recopila ComPay Delivery, para qué los usamos y con quién los compartimos — incluida la ubicación en tiempo real de los mensajeros, que se transmite solo mientras están disponibles o tienen un pedido activo, también con la App en segundo plano.</p>
   </div>
 
   <nav class="toc" aria-label="Índice">
@@ -274,7 +274,8 @@
         <li><a href="#p8"><span class="num mono">08</span>Tus Derechos</a></li>
         <li><a href="#p9"><span class="num mono">09</span>Menores de Edad</a></li>
         <li><a href="#p10"><span class="num mono">10</span>Cambios a esta Política</a></li>
-        <li><a href="#p11"><span class="num mono">11</span>Contacto</a></li>
+        <li><a href="#p11"><span class="num mono">11</span>Información para Mensajeros</a></li>
+        <li><a href="#p12"><span class="num mono">12</span>Contacto</a></li>
       </ol>
     </details>
   </nav>
@@ -285,13 +286,16 @@
     <dl class="data-table">
       <div class="data-row"><dt>Cuenta</dt><dd>Nombre, teléfono, correo, foto de perfil.</dd></div>
       <div class="data-row"><dt>Pedidos</dt><dd>Direcciones de recogida/entrega, detalles del paquete, método de pago elegido, historial de pedidos.</dd></div>
-      <div class="data-row"><dt>Ubicación</dt><dd>Posición GPS del mensajero mientras tiene un pedido activo; ubicación del cliente al crear un pedido, para calcular distancia y ruta.</dd></div>
+      <div class="data-row"><dt>Ubicación</dt><dd>Posición GPS del mensajero mientras está disponible o tiene un pedido activo, incluso con la App cerrada o en segundo plano; ubicación del cliente al crear un pedido, para calcular distancia y ruta.</dd></div>
       <div class="data-row"><dt>Dispositivo</dt><dd>Identificador del dispositivo para notificaciones push (Firebase).</dd></div>
       <div class="data-row"><dt>Fotos</dt><dd>Fotos que subas voluntariamente — de perfil, del paquete a enviar o enviadas por el chat.</dd></div>
       <div class="data-row"><dt>Mensajes</dt><dd>Mensajes de texto e imágenes que intercambias con el mensajero o el cliente a través del chat de un pedido.</dd></div>
       <div class="data-row"><dt>Incidencias</dt><dd>Reportes que envías sobre un pedido (descripción del problema y evidencias adjuntas) y las respuestas de soporte.</dd></div>
       <div class="data-row"><dt>Verificación</dt><dd>Tu número de teléfono o correo para enviarte códigos de verificación (SMS o email) al registrarte, iniciar sesión o recuperar tu contraseña.</dd></div>
       <div class="data-row"><dt>Diagnóstico</dt><dd>Informes de fallos de la App (modelo del dispositivo, versión del sistema operativo y de la App, y el detalle técnico del error), recogidos con Firebase Crashlytics.</dd></div>
+      <div class="data-row"><dt>Verificación de mensajero</dt><dd>Fotos del carnet de identidad (frente y reverso), una selfie sosteniendo el carnet y, según el vehículo, fotos de la licencia de conducción, del documento del vehículo y una selfie con la licencia.</dd></div>
+      <div class="data-row"><dt>Perfil de mensajero</dt><dd>Tipo de vehículo, presentación opcional, estado de verificación (pendiente, aprobado, rechazado o suspendido), nivel (junior, senior o partner), calificación y número de entregas realizadas.</dd></div>
+      <div class="data-row"><dt>Saldo y ganancias</dt><dd>Saldo del mensajero, comisiones descontadas por cada entrega, recargas y el historial de esos movimientos.</dd></div>
     </dl>
   </section>
 
@@ -302,7 +306,9 @@
 
   <section class="clause" id="p3">
     <div class="clause-head"><span class="clause-num mono">03</span><h2 class="clause-title">Ubicación en Tiempo Real</h2></div>
-    <p>Si eres mensajero, tu ubicación se transmite mientras estás disponible o tienes un pedido activo, para que el cliente pueda ver el avance de la entrega y para asignarte pedidos cercanos. Si eres cliente, tu ubicación se usa solo para sugerir tu zona/dirección y calcular el costo del envío. Puedes desactivar el acceso a la ubicación desde los ajustes de tu dispositivo, aunque esto puede limitar funciones como el seguimiento en tiempo real.</p>
+    <p><strong>Si eres mensajero</strong>, la App recoge tu ubicación mientras te marcas como disponible o tienes un pedido activo, <strong>incluso cuando la App está cerrada o en segundo plano</strong>. Mientras ocurre, verás una notificación permanente en tu dispositivo. Usamos esta ubicación para asignarte pedidos cercanos, para que el cliente vea el avance de su entrega y para resolver incidencias de un pedido. Cuando te desconectas y no tienes pedidos activos, dejamos de recoger tu ubicación.</p>
+    <p style="margin-top:0.75rem;"><strong>Si eres cliente</strong>, tu ubicación se usa solo mientras usas la App, para sugerir tu zona o dirección y calcular el costo del envío.</p>
+    <p style="margin-top:0.75rem;">Puedes quitar el permiso de ubicación desde los ajustes de tu dispositivo. Si eres mensajero, sin ese permiso no podrás recibir ni realizar pedidos.</p>
   </section>
 
   <section class="clause" id="p4">
@@ -345,7 +351,21 @@
   </section>
 
   <section class="clause" id="p11">
-    <div class="clause-head"><span class="clause-num mono">11</span><h2 class="clause-title">Contacto</h2></div>
+    <div class="clause-head"><span class="clause-num mono">11</span><h2 class="clause-title">Información para Mensajeros</h2></div>
+
+    <p><strong>Por qué pedimos tus documentos.</strong> Antes de que puedas realizar entregas verificamos tu identidad y, según tu vehículo, que estés habilitado para conducirlo. Las fotos de tus documentos y las selfies se usan solo para esa verificación, para prevenir fraudes y suplantaciones, y para atender incidencias o requerimientos legales relacionados con tus entregas.</p>
+
+    <p style="margin-top:0.75rem;"><strong>Quién puede verlos.</strong> Las fotos de tus documentos y tus selfies de verificación solo las ve el equipo de administración de ComPay Delivery. <strong>Nunca se muestran a los clientes.</strong> Los clientes solo ven tu nombre, tu foto de perfil, tu tipo de vehículo, tu calificación, tu número de entregas y, mientras tienes un pedido suyo activo, tu teléfono y tu ubicación en tiempo real. Las imágenes se guardan en Cloudinary, nuestro proveedor de almacenamiento de imágenes.</p>
+
+    <p style="margin-top:0.75rem;"><strong>Saldo y comisiones.</strong> Guardamos el saldo de tu cuenta, las comisiones descontadas por cada entrega según tu nivel y el historial de recargas y movimientos. Usamos estos datos para calcular tus ganancias, aplicar las reglas de comisión y resolver reclamaciones. Si tu saldo baja del mínimo permitido, la App puede impedirte aceptar pedidos nuevos hasta que recargues.</p>
+
+    <p style="margin-top:0.75rem;"><strong>Estado de tu cuenta.</strong> Si rechazamos tu solicitud o suspendemos tu cuenta, guardamos el motivo para poder explicártelo y revisar posibles apelaciones.</p>
+
+    <p style="margin-top:0.75rem;"><strong>Cuánto tiempo los guardamos.</strong> Conservamos tus documentos de verificación mientras tu cuenta de mensajero esté activa. Si eliminas tu cuenta, borramos las fotos de tus documentos y tus selfies. Los registros de entregas, comisiones y movimientos de saldo se conservan de forma anonimizada el tiempo que exija la ley.</p>
+  </section>
+
+  <section class="clause" id="p12">
+    <div class="clause-head"><span class="clause-num mono">12</span><h2 class="clause-title">Contacto</h2></div>
     <p>Para preguntas sobre privacidad o para ejercer tus derechos sobre tus datos, escríbenos a <a href="mailto:janderdeveloper@gmail.com">janderdeveloper@gmail.com</a>.</p>
   </section>
 </main>
